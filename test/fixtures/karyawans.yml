@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nama: MyString
+  pendidikan_id: 1
+  posisi_id: 1
+
+two:
+  nama: MyString
+  pendidikan_id: 1
+  posisi_id: 1

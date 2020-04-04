@@ -1,0 +1,22 @@
+<%= form_with(model: pendidikan, local: true) do |form| %>
+  <% if pendidikan.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(pendidikan.errors.count, "error") %> prohibited this pendidikan from being saved:</h2>
+
+      <ul>
+        <% pendidikan.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :pendidikan_terakhir %>
+    <%= form.text_field :pendidikan_terakhir %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

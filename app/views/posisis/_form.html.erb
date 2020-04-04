@@ -1,0 +1,22 @@
+<%= form_with(model: posisi, local: true) do |form| %>
+  <% if posisi.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(posisi.errors.count, "error") %> prohibited this posisi from being saved:</h2>
+
+      <ul>
+        <% posisi.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :posisi %>
+    <%= form.text_field :posisi %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Posisi</h1>
+<%= link_to 'Tambah Posisi', new_posisi_path %>
+<table class="responsive-table blue lighten-5">
+    <thead>
+        <tr>
+            <th>Posisi</th>
+            <th colspan="3">Aksi</th>
+
+
+        </tr>
+    </thead>
+
+    <tbody>
+        <% @posisis.each do |posisi| %>
+        <tr>
+            <td><%= posisi.posisi %></td>
+
+            <td><%= link_to 'Show', posisi %></td>
+            <td><%= link_to 'Edit', edit_posisi_path(posisi) %></td>
+            <td><%= link_to 'Destroy', posisi, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+        <% end %>
+    </tbody>
+</table>
+
+<br>

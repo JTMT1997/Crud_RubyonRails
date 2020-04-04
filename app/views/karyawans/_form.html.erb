@@ -1,0 +1,32 @@
+<%= form_with(model: karyawan, local: true) do |form| %>
+<% if karyawan.errors.any? %>
+<div id="error_explanation">
+    <h2><%= pluralize(karyawan.errors.count, "error") %> prohibited this karyawan from being saved:</h2>
+
+    <ul>
+        <% karyawan.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+        <% end %>
+    </ul>
+</div>
+<% end %>
+
+<div class="field">
+    <%= form.label :nama %>
+    <%= form.text_field :nama %>
+</div>
+
+<div class="field">
+    <%= form.label :pendidikan_id %>
+    <%= form.number_field :pendidikan_id %>
+</div>
+
+<div class="field">
+    <%= form.label :posisi_id %>
+    <%= form.number_field :posisi_id %>
+</div>
+
+<div class="actions">
+    <%= form.submit %>
+</div>
+<% end %>
